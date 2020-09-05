@@ -20,10 +20,16 @@ pipeline {
     }
 
     stage('Deploy') {
+      when
+          {
+            branch 'master'
+          }
       parallel {
+        
         stage('Deploy') {
+          
           steps {
-            input 'DO you want proceed?'
+            input 'Do you want proceed?'
             echo 'Deployment stage'
           }
         }
