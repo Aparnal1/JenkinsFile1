@@ -1,0 +1,18 @@
+pipeline
+{
+agent
+{
+label 'slave'
+}
+  Stages
+    {
+        stage('Hello')
+          {
+            steps{
+                    sh 'java -version'
+                    echo 'Get directory'
+                    sh 'pwd'
+                  }
+           }
+     }
+ }
